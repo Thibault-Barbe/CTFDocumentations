@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "escodegen": "^2.1.0"
-  },
-  "devDependencies": {
-    "@babel/generator": "^7.23.5"
-  }
-}
