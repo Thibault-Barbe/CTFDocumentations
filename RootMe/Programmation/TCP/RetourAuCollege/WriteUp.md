@@ -1,10 +1,10 @@
 # TCP - Retour au collège
 
-## 5 Points
+## **5 Points**
 
 ### Programmation réseau
 
-### Énoncé
+## **Énoncé**
 
 Pour commencer cette épreuve utilisant le protocole TCP, vous devez vous connecter à un programme sur une socket réseau.
 
