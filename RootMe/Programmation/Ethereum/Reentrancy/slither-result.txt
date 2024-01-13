@@ -1,0 +1,52 @@
+'solc --version' running
+'solc Reentrancy.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --allow-paths .,/Users/tibobarbe/Thibault/Security/CTFDocumentations/RootMe/Programmation/Ethereum/Reentrancy' running
+Compilation warnings/errors on Reentrancy.sol:
+Reentrancy.sol:46:9: Warning: Return value of low-level calls not used.
+        msg.sender.call.value(wad)("");
+        ^----------------------------^
+
+INFO:Detectors:
+Reentrancy in Reentrancy.withdraw(uint256) (Reentrancy.sol#43-49):
+	External calls:
+	- msg.sender.call.value(wad)() (Reentrancy.sol#46)
+	State variables written after the call(s):
+	- balanceOf[msg.sender] -= wad (Reentrancy.sol#47)
+	Reentrancy.balanceOf (Reentrancy.sol#17) can be used in cross function reentrancies:
+	- Reentrancy.balanceOf (Reentrancy.sol#17)
+	- Reentrancy.deposit() (Reentrancy.sol#38-41)
+	- Reentrancy.transferFrom(address,address,uint256) (Reentrancy.sol#65-82)
+	- Reentrancy.withdraw(uint256) (Reentrancy.sol#43-49)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities
+
+INFO:Detectors:
+Reentrancy.claim() (Reentrancy.sol#31-35) uses a dangerous strict equality:
+	- address(this).balance == 0 (Reentrancy.sol#32)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities
+INFO:Detectors:
+Reentrancy.withdraw(uint256) (Reentrancy.sol#43-49) ignores return value by msg.sender.call.value(wad)() (Reentrancy.sol#46)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unchecked-low-level-calls
+INFO:Detectors:
+Reentrancy in Reentrancy.withdraw(uint256) (Reentrancy.sol#43-49):
+	External calls:
+	- msg.sender.call.value(wad)() (Reentrancy.sol#46)
+	Event emitted after the call(s):
+	- Withdrawal(msg.sender,wad) (Reentrancy.sol#48)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3
+
+INFO:Detectors:
+Pragma version^0.5.0 (Reentrancy.sol#1) allows old versions
+solc-0.5.0 is not recommended for deployment
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+
+INFO:Detectors:
+Low level call in Reentrancy.withdraw(uint256) (Reentrancy.sol#43-49):
+	- msg.sender.call.value(wad)() (Reentrancy.sol#46)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
+
+INFO:Detectors:
+Reentrancy.decimals (Reentrancy.sol#10) should be constant
+Reentrancy.name (Reentrancy.sol#8) should be constant
+Reentrancy.symbol (Reentrancy.sol#9) should be constant
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+
+INFO:Slither:Reentrancy.sol analyzed (1 contracts with 93 detectors), 10 result(s) found
