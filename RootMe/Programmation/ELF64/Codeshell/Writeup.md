@@ -1,14 +1,14 @@
-# ELF x64 - Shellcoding - Sheep warmup
+# ELF x64 - Shellcoding - Sheep warmup
 
 ## 25 Points
 
-### Un petit saute-moutons pour s’échauffer
+### Un petit saute-moutons pour s’échauffer
 
-# Énoncé
+## Énoncé
 
 Le programme suivant exécutera le shellcode que vous lui fournirez ... après que des moutons s’installent dedans !
 
-## Solution
+## Solution
 L'objectif est de trouver un moyen d'afficher le contenu du fichier ~/.passwd. Le problème étant qu'il n'est lisible que par une personne avec le rôle challenge-ch12-cracked (1155), or on a le rôle challenge-ch12 (1154).
 On nous un fichier ch12.s, qui est un code en assembleur 64-bits et un exécutable ch12 qui est le fichier ch12.s compilé. Lorsque l'on lance ch12, on tombe sur un prompt qui nous demande d'envoyer un input. On va donc prendre cela comme une faille et commencer à regarder comment est-ce qu'on pourrait faire pour qu'à partir de cet input, on puisse faire cat .passwd.
 

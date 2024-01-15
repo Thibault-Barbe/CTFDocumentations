@@ -1,9 +1,9 @@
 # Mon avancement
 
-## **[tibosinje](https://www.root-me.org/tibosinje?lang=fr)** - 920 points 55 challenges 1 compromissions
+## **[tibosinje](https://www.root-me.org/tibosinje?lang=fr)** - 955 points 57 challenges 1 compromissions
 
-## App-script 8 / 32
-### 90 points
+## App-script 10 / 32
+### 125 points
 
 Bash - System 1 (5 points)
 
@@ -19,7 +19,13 @@ Bash - Unquoted expression injection (15 points)
 
 [Docker - I Am Groot](./AppScript/Docker/IAmGroot.md) (15 points)
 
+[Perl - Command injection](./AppScript/PerlInjection.md) (15 points)
+
+[Bash - cron](./AppScript/Bash/Bash-Cron.md) (20 points)
+
 [LaTeX - Execution de commandes](./AppScript/Latex/ExecutionDeCommande.md) (20 points)
+
+[Python - Input()](./AppScript/Python/Python-Input.md) (20 points)
 
 ---
 
@@ -59,6 +65,8 @@ Bash - Unquoted expression injection (15 points)
 [Ethereum - Tutoreum](./Programmation/Ethereum/Tutoreum.md) (20 Points)
 
 [Suite mathématique](./Programmation/SuiteMathematique/) (20 points)
+
+[ELF x64 - Shellcoding - Sheep warmup](./Programmation//ELF64/) (25 points)
 
 [Ethereum - Takeover](./Programmation/Ethereum/Takeover.md) (30 points)
 
