@@ -38,5 +38,5 @@ Tell me the clear content of this string !
 my string is 'R25MS1NDYjFMeVE1NWQ5WWhHWWtQaQ=='. What is your answer ? 
 decoded string:  GnLKSCb1LyQ55d9YhGYkPi
 
-Réponse du serveur: [+] Good job ! Here is your flag: RM{TCP_Enc0d3_4nd_D3c0d3}
+Réponse du serveur: [+] Good job ! Here is your flag: [censorship]
 ```

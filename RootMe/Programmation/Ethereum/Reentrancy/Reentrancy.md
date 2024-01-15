@@ -84,4 +84,4 @@ Le process pour pouvoir faire la reentrancy attaque de notre côté est le suiva
 2. Utiliser la fonction attack et récupérer tout ce qu'il y a dans le contrat
 3. Regarder si il reste encore quelque chose dans la balance de la target. Si il n'y a plus rien, c'est que notre attaque a marché, on qu'on peut donc faire retrieveStolenFunds() et récupérer tout ce qu'on a volé.
 
-Lorsque la target est à 0 dans sa balance, on peut donc utiliser la fonction **claim**, puis pour mettre **locked** à false, puis en conséquence, appuyer sur next et récupérer le flag du challenge.
+Lorsque la target est à 0 dans sa balance, on peut donc utiliser la fonction **claim**, puis pour mettre **locked** à false, puis en conséquence, appuyer sur **next** et récupérer le flag du challenge.

@@ -1,9 +1,9 @@
 # Mon avancement
 
-## **[tibosinje](https://www.root-me.org/tibosinje?lang=fr)** - 955 points 57 challenges 1 compromissions
+## **[tibosinje](https://www.root-me.org/tibosinje?lang=fr)** - 1000 points 59 challenges 1 compromissions
 
-## App-script 10 / 32
-### 125 points
+## App-script 11 / 32
+### 145 points
 
 Bash - System 1 (5 points)
 
@@ -49,8 +49,8 @@ Bash - Unquoted expression injection (15 points)
 
 ---
 
-## Programmation 11 / 21
-### 230 points
+## Programmation 12 / 21
+### 255 points
 
 [TCP - Retour au collège](./Programmation/TCP/RetourAuCollege/) (5 points)
 
@@ -68,6 +68,8 @@ Bash - Unquoted expression injection (15 points)
 
 [ELF x64 - Shellcoding - Sheep warmup](./Programmation//ELF64/) (25 points)
 
+[Résolveur de Polynômes du second degré](./Programmation/TCP/PolynomeSecondDegr%C3%A9/) (25 points)
+
 [Ethereum - Takeover](./Programmation/Ethereum/Takeover.md) (30 points)
 
 [Ethereum - NotSoPriv8](./Programmation/Ethereum/NotSoPrivate.md) (35 points)
@@ -76,7 +78,7 @@ Bash - Unquoted expression injection (15 points)
 
 ---
 
-## Résaliste 0 / 56
+## Réaliste 0 / 56
 ### 0 points
 
 ---

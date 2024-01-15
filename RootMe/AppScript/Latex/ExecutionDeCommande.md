@@ -60,9 +60,7 @@ entering extended mode
 
 $
 
-l.1 LaTeX_
-    
-    wr1t3_18_a_us3ful_c0mm4nd_3x3cut10n*
+l.1 [censorship]
 
 Here is how much of TeX's memory you used:
 
@@ -71,6 +69,4 @@ Here is how much of TeX's memory you used:
 [...]
 ```
 
-On trouve donc le contenu du fichier dans le fichier de log:
-
-Flag = **LaTeX_wr1t3_18_a_us3ful_c0mm4nd_3x3cut10n**
+On trouve donc le contenu du fichier dans le fichier de log.

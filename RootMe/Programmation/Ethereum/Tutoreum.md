@@ -35,4 +35,4 @@ level.locked().then(console.log)
 true
 ```
 
-On peut donc clicker sur le bouton next et avoir le flag.
+On peut donc clicker sur le bouton **next** et avoir le flag.
