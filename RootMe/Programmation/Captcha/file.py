@@ -2,7 +2,6 @@ import requests
 import re
 from PIL import Image, ImageFilter
 import base64
-import subprocess
 import unicodedata ,pytesseract
 
 url = 'http://challenge01.root-me.org/programmation/ch8/'

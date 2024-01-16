@@ -1,0 +1,31 @@
+if page in question
+    What's the page title
+    What's the page description?
+
+elif child in question
+    if last in question
+        if tag in question
+            What's the last child's tag of li with id=YTpTY4g3ZY?
+            What's the last child's tag of p with class=n91LboPxI1?
+        else:
+            What's the last child's lang value of footer with lang=4FAkpbbmAz?
+    else:
+        What's the first child's tag of td with nonce=mCykxcD9Qk?
+
+elif parent in question
+    if tag in question
+        What's the parent's tag of br with class=Jc7THs2rcC?
+        What's the parent's tag of br with random=IpreWc8LY9?
+    else
+        What's the parent's id value of footer with lang=hzXsZoSvzd?
+        What's the parent's lang value of footer with id=Q7tKwnDH7z?
+
+elif 'of the element' in question
+    What's the innerText value of the element td with class=BU22wFDSyG?
+    What's the outerHTML value of the element img with class=HI3uflASVt?
+    What's the innerHTML value of the element footer with lang=AApId5R4JA?
+
+else
+    What's the p's id value with lang=H6M9qW0nSF?
+    What's the a's nonce value with lang=7DtDMf2JBO?
+    What's the footer's class value with id=tI17LP56td?
