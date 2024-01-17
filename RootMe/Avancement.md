@@ -1,6 +1,6 @@
 # Mon avancement
 
-## **[tibosinje](https://www.root-me.org/tibosinje?lang=fr)** - 1100 points 63 challenges 1 compromissions
+## **[tibosinje](https://www.root-me.org/tibosinje?lang=fr)** - 1125 points 65 challenges 1 compromissions
 
 ## App-script 13 / 32
 ### 175 points
@@ -86,8 +86,12 @@ Bash - Unquoted expression injection (15 points)
 
 ---
 
-## Réaliste 0 / 56
-### 0 points
+## Réaliste 2 / 56
+### 25 points
+
+[Eh oui, parfois](./Realiste/EtOuiParfois.md) (10 points)
+
+[End Roid](./Realiste/EndRoid.md) (15 points)
 
 ---
 
