@@ -108,17 +108,17 @@ Bash - Unquoted expression injection (15 points)
 ## Web Client 11 / 41
 ### 170 points
 
-HTML - Boutons desactivés (5 points)
+[HTML - Boutons desactivés](./WebClient/BouttonDesactiv%C3%A9.md) (5 points)
 
-Javascript - Authentification (5 points)
+[Javascript - Authentification](./WebClient/Javascript/JavascriptAuthentification.md) (5 points)
 
-Javascript - Source (5 points)
+[Javascript - Source](./WebClient/Javascript/JavascriptSource.md) (5 points)
 
-Javascript - Authentification 2 (10 points)
+[Javascript - Authentification 2](./WebClient/Javascript/JavascriptAuthentification2.md) (10 points)
 
-Javascript - Obfuscation 1 (10 points)
+[Javascript - Obfuscation 1](./WebClient/Javascript/Obfuscation1.md) (10 points)
 
-Javascript - Obfuscation 2 (10 points)
+[Javascript - Obfuscation 2](./WebClient/Javascript/Obfuscation2.md) (10 points)
 
 Javascript - Native code (15 points)
 

@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
-hote = 'ctf12.root-me.org'
+hote = 'ctf09.root-me.org'
 
 port = 4444
 
@@ -43,7 +43,8 @@ def get_child_info(soup, question):
         element = soup.find(of, {condition[0]: condition[1]})
 
         if element:
-            child = element.find_all(recursive=False)[-1 if 'last' in question else 0]  # Find the last child
+            id = -1 if 'last' in question else 0
+            child = element.find_all(recursive=True)[id]  # Find the last child
             child_tag = child.name if child else None
             return "{\"solution\": \""+child_tag+"\"}"
         else:
@@ -59,7 +60,8 @@ def get_child_info(soup, question):
         element = soup.find(of, {condition[0]: condition[1]})
 
         if element:
-            child = element.find_all(recursive=False)[-1 if 'last' in question else 0]  # Find the last child
+            id = -1 if 'last' in question else 0
+            child = element.find_all(recursive=True)[id]  # Find the last child
             child_value = child.get(value) if child else None
             if isinstance(child_value, str):
                 return "{\"solution\": \""+child_value+"\"}"
@@ -103,14 +105,14 @@ def get_element_value(soup, question):
     of = match.group(1)
     condition = match.group(2).split("=")
 
-    print(soup.prettify())
+    # print(soup.prettify())
 
     if 'innerText' in question:
 
         element = soup.find(of, {condition[0]: condition[1]})
 
         if element:
-            inner_text_value = element.get_text(strip=True)
+            inner_text_value = element.get_text(strip=False).replace('"', '\\"').replace('\n', '').replace("\t", ' ')
             return "{\"solution\": \""+inner_text_value+"\"}"
         else:
             print("no element")
@@ -119,7 +121,8 @@ def get_element_value(soup, question):
         element = soup.find(of, {condition[0]: condition[1]})
 
         if element:
-            html_value = str(element)
+            print("element: ", element)
+            html_value = ''.join(map(str, element.contents)).replace('"', '\\"').replace("\t", ' ').replace('\n', '', 1)
             return "{\"solution\": \""+html_value+"\"}"
         else:
             print("no element")
@@ -128,8 +131,11 @@ def get_element_value(soup, question):
         element = soup.find(of, {condition[0]: condition[1]})
 
         if element:
-            # html_value = str(element)
-            html_value = element.contents[0].strip()
+            print("element: ", element, "\n\n")
+            for child in element.find_all(recursive=False):
+                if len(element.find_all(recursive=False)) > 1:
+                    child.decompose()
+            html_value = str(element).replace('"', '\\"').replace('\n', '')
             return "{\"solution\": \""+html_value+"\"}"
         else:
             print("no element")
@@ -145,7 +151,9 @@ def get_random_value(soup, question):
 
     if element:
         value = element.get(typeof_value)
-        return "{\"solution\": \""+value+"\"}"
+        if (isinstance(value, str)):
+            return "{\"solution\": \""+value+"\"}"
+        return "{\"solution\": \""+value[-1]+"\"}"
     else:
         print("no element")
 
@@ -188,12 +196,8 @@ while True:
 
         content = requests.get(url=url, cookies={"random": cookie})
         if content.status_code == 200:
-            print("question = ", question)
             res = find_answer(content.text, question)+"\n"
-            print("resultat: ", res)
+            print("res: ", res)
             answer = sock.sendall(res.encode('utf-8'))
         else:
             print("Content ERROR: ", content.status_code)
-    
-    else:
-        print("no match")
