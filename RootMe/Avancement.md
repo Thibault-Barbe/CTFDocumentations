@@ -120,13 +120,13 @@ Bash - Unquoted expression injection (15 points)
 
 [Javascript - Obfuscation 2](./WebClient/Javascript/Obfuscation2.md) (10 points)
 
-Javascript - Native code (15 points)
+[Javascript - Native code](./WebClient/Javascript/NativeCode.md) (15 points)
 
 Javascript - Webpack (15 points)
 
-Javascript - Obfuscation 3 (30 points)
+[Javascript - Obfuscation 3](./WebClient/Javascript/Obfucation3.md) (30 points)
 
-XSS - Stockée 1 (30 points)
+[XSS - Stockée 1](./WebClient/XSS/XSS-Stocke1.md) (30 points)
 
 CSP Bypass - Inline code (35 points)
 
