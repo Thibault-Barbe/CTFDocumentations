@@ -1,6 +1,6 @@
 # Mon avancement
 
-## **[tibosinje](https://www.root-me.org/tibosinje?lang=fr)** - 1125 points 65 challenges 1 compromissions
+## **[tibosinje](https://www.root-me.org/tibosinje?lang=fr)** - 1140 points 67 challenges 1 compromissions
 
 ## App-script 13 / 32
 ### 175 points
@@ -100,8 +100,12 @@ Bash - Unquoted expression injection (15 points)
 
 ---
 
-## Stéganographie 0 / 23
-### 0 points
+## Stéganographie 2 / 23
+### 15 points
+
+[EXIF - Metadata](./Steganographie/EXIF-Metadata/EXIF-Metadata.md) (5 points)
+
+[Point à la ligne](./Steganographie/PointALaLigne/PointALaLigne.md) (10 points)
 
 ---
 
